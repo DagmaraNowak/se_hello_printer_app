@@ -108,6 +108,12 @@ Centos
     $ yum install -y docker-ce
     $ systemctl start docker
 
+
+Wchodzimy na strone Statuscake gdzie tworzymy konto.
+Nastepnie tworzymy grupe kontaktowa i nowy test z nazwa naszego URL (HEROKU)
+Monitorujemy nasza aplikacje:
+https://app.statuscake.com/YourStatus.php?added=Yes&Count=1
+
 Materiały
 =========
 
