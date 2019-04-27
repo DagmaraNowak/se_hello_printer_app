@@ -5,12 +5,15 @@ deps:
 		pip install -r requirements.txt;
 		pip install -r test_requirements.txt
 
+# Sprawdzanie poprawnosci kodu za pomoca make lint
 lint:
 		flake8 hello_world test
 
+# Uruchamianie testow za pomoca:
 test:
 		PYTHONPATH=. py.test --verbose -s
 
+# Uruchamianie aplikacji za pomoca:
 run:
 		PYTHONPATH=. FLASK_APP=hello_world flask run
 
