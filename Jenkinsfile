@@ -6,11 +6,6 @@ pipeline {
                     sh 'make deps'
                 }
         }
-        stage('Linter') {
-            steps {
-                    sh 'make lint'
-                }
-        }
         stage('Test') {
             steps {
               sh 'make test_xunit || true'
@@ -23,6 +18,12 @@ pipeline {
                   ]
         }
         }
+        stage('Lint') {
+            steps {
+              sh 'make lint'
+            }
+        }
+    }
     post{
         always{
             cobertura autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: 'coverage.xml',
